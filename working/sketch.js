@@ -21,8 +21,13 @@ function draw() {
   //background(0);
 
   drawFractal(itSlider.value(), 300, 400, 200);
+  // test();
 
+}
 
+function test() {
+  particle[0] = new triangleFr(100, 100, 100, 0, 1);
+  particle[0].display();
 }
 
 function drawFractal(iterations, startX, startY, startSize) {
