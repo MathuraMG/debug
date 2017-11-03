@@ -12,36 +12,40 @@
 
 
 
-function triangleFr(x, y, size, flag, dir) {
-  this.size = size;
-  this.flag = flag;
-  if (dir == 1) {
+class triangleFr{
+  constructor(x, y, size, flag, dir) {
+    this.size = size;
+    this.flag = flag;
+    if (dir == 1) {
 
-    this.x1 = x;
-    this.y1 = y;
-    this.x2 = x - size * 0.5;
-    this.y2 = y - size * 0.866;
-    this.x3 = x + size * 0.5;
-    this.y3 = y - size * 0.866;
-  } else if (dir == 2) {
+      this.x1 = x;
+      this.y1 = y;
+      this.x2 = x - size * 0.5;
+      this.y2 = y - size * 0.866;
+      this.x3 = x + size * 0.5;
+      this.y3 = y - size * 0.866;
+    } else if (dir == 2) {
 
-    this.x1 = x - size * 0.5;
-    this.y1 = y + size * 0.866;
-    this.x2 = x - size;
-    this.y2 = y;
-    this.x3 = x;
-    this.y3 = y;
-  } else if (dir == 3) {
-    this.x1 = x + size * 0.5;
-    this.y1 = y + size * 0.866;
-    this.x2 = x + size;
-    this.y2 = y;
-    this.x3 = x;
-    this.y3 = y;
+      this.x1 = x - size * 0.5;
+      this.y1 = y + size * 0.866;
+      this.x2 = x - size;
+      this.y2 = y;
+      this.x3 = x;
+      this.y3 = y;
+    } else if (dir == 3) {
+      this.x1 = x + size * 0.5;
+      this.y1 = y + size * 0.866;
+      this.x2 = x + size;
+      this.y2 = y;
+      this.x3 = x;
+      this.y3 = y;
+    }
+
   }
-  this.display() = function() {
 
-    triangle(this.x1, this.y1, this.x2, this.y2, this.x3,);
+
+  display() {
+    triangle(this.x1, this.y1, this.x2, this.y2, this.x3, );
     return ({
       xup: (this.x3 + this.x2) / 2,
       yup: this.y2,
