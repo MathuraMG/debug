@@ -14,9 +14,7 @@ function setup() {
 }
 
 function draw() {
-  //delay ++;
   particle = [];
-  //background(0);
   drawFractal(itSlider.value, 300, 400, 200);
 }
 
