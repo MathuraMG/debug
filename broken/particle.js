@@ -12,7 +12,7 @@
 
 
 
-class triangleFr{
+class triangleFr {
   constructor(x, y, size, flag, dir) {
     this.size = size;
     this.flag = flag;
@@ -25,7 +25,7 @@ class triangleFr{
       this.x3 = x + size * 0.5;
       this.y3 = y - size * 0.866;
     } else if (dir == 2) {
-
+  
       this.x1 = x - size * 0.5;
       this.y1 = y + size * 0.866;
       this.x2 = x - size;
@@ -40,12 +40,10 @@ class triangleFr{
       this.x3 = x;
       this.y3 = y;
     }
-
   }
-
-
+  
   display() {
-    triangle(this.x1, this.y1, this.x2, this.y2, this.x3, );
+    triangle(this.x1, this.y1, this.x2, this.y2, this.x3, this.y3);
     return ({
       xup: (this.x3 + this.x2) / 2,
       yup: this.y2,
@@ -57,3 +55,5 @@ class triangleFr{
     });
   }
 }
+
+

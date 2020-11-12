@@ -1,11 +1,11 @@
-var particle = [];
-var particlenew = [];
-var startX;
-var startY;
-var count;
-var delay = 0;
+let particle = [];
+let particlenew = [];
+let startX;
+let startY;
+let count;
+let delay = 0;
 
-var fractal = 1;
+let fractal = 1;
 
 function setup() {
   createCanvas(600, 500);
@@ -25,13 +25,13 @@ function drawFractal(iterations, startX, startY, startSize) {
 
   particle[0] = new triangleFr(startX, startY, startSize, 0, 1);
 
-  for (var i = 1; i < iterations; i++) {
+  for (let i = 1; i < iterations; i++) {
 
     l = particle.length;
     count = 0;
     // if(count%100 == 0)
 
-    for (var j = 0; j < l; i++) {
+    for (let j = 0; j < l; i++) {
       if (particle[j].flag == (i - 1)) {
         fill(255, 40 + 30 * i,  80 + 20 * i);
         noStroke();
