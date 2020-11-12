@@ -48,14 +48,13 @@ function drawFractal(iterations, startX, startY, startSize) {
 
     particle = particle.concat(particlenew);
     //particlenew = [];
-  }
-
-  for (j = 0; j < particle.length; j++) {
-    fill(255, 40 + 30 * i,  80 + 20 * i);
-    noStroke();
-    if (particle[j].flag == (i - 1))
-      particle[j].display();
-
+    for (j = 0; j < particle.length; j++) {
+      fill(255, 40 + 30 * i,  80 + 20 * i);
+      noStroke();
+      if (particle[j].flag == (i - 1))
+        particle[j].display();
+  
+    }
   }
 }
 
